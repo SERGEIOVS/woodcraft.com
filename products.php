@@ -7,8 +7,7 @@ $email = $_POST['email'];
 $mobile = $_POST['mobile'];
 $password = $_POST['password'];
 
-$sql = "insert into `crud` (name,email,mobile,password)
-values('$name','$email','$mobile','$password')";
+$sql = "insert into `crud` (name,email,mobile,password) values('$name','$email','$mobile','$password')";
 $result = mysqli_query($con, $sql);
 if($result)
 {
@@ -27,52 +26,57 @@ else{
 ?>
 
 <!doctype html>
-<html lang="en">
+<html lang = "en" >
   <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset = "utf-8">
+    <meta name = "viewport" content = "width=device-width , initial-scale = 1 " >
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-    <title>CRUD</title>
+    <title>Add a product</title>
   </head>
   <body>
+    <br>
       <div class = "container">
       <form method="POST">
           
   <div class="form-group">
-    <label >Имя пользователя</label>
+
+    <label >Product name</label>
     <input type="text" class="form-control"
-    placeholder="введи имя"
+    placeholder="введи название продукта"
     name = "name" autocomplete = "off";>
+
   </div>
 
+
   <div class="form-group">
-    <label >Почта</label>
+
+    <label >Product category</label>
     <input type="email" class="form-control"
-    placeholder = "введи почту"
+    placeholder = "введи категорию продукта"
     name = "email" autocomplete = "off";>
+
     </div>
 
+
+
   <div class="form-group">
-    <label >телефон</label>
+
+    <label >количество</label>
     <input type="text" class="form-control"
-    placeholder="телефон" name = "mobile" autocomplete="off">
+    placeholder="введи количество" name = "mobile" autocomplete="off">
+
 </div>
 
-  </div>
-  <div class="form-group">
-    <label>Пароль</label>
-    <input type="text" class="form-control"
-    placeholder = "введи пароль"
-    name="password">
-  </div>
+<br>
 
   <button type="submit" class="btn btn-primary" name = "submit">Submit</button>
   
 </form>
+
 
 </div>
 
