@@ -7,7 +7,7 @@ $email = $_POST['email'];
 $mobile = $_POST['mobile'];
 $password = $_POST['password'];
 
-$sql = "insert into `crud` (name,email,mobile,password) values('$name','$email','$mobile','$password')";
+$sql = "insert into `users` (name,email,mobile,password) values('$name','$email','$mobile','$password')";
 $result = mysqli_query($con, $sql);
 if($result)
 {

@@ -24,10 +24,10 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `crud`
+-- Структура таблицы `users`
 --
 
-CREATE TABLE `crud` (
+CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `name` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
@@ -36,10 +36,10 @@ CREATE TABLE `crud` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Дамп данных таблицы `crud`
+-- Дамп данных таблицы `users`
 --
 
-INSERT INTO `crud` (`id`, `name`, `email`, `mobile`, `password`) VALUES
+INSERT INTO `users` (`id`, `name`, `email`, `mobile`, `password`) VALUES
 (4, 'Sergei Sergei', 'mr.serz98@mail.ru', '8 (434) 234-52-35', '111');
 
 --
@@ -47,9 +47,9 @@ INSERT INTO `crud` (`id`, `name`, `email`, `mobile`, `password`) VALUES
 --
 
 --
--- Индексы таблицы `crud`
+-- Индексы таблицы `users`
 --
-ALTER TABLE `crud`
+ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -57,9 +57,9 @@ ALTER TABLE `crud`
 --
 
 --
--- AUTO_INCREMENT для таблицы `crud`
+-- AUTO_INCREMENT для таблицы `users`
 --
-ALTER TABLE `crud`
+ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 

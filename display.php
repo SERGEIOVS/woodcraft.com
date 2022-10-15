@@ -1,14 +1,14 @@
 <?php
 use LDAP\Result;
 
-include 'dbconnection.php';
+include 'woodcraftdbconnection.php';
 
 ?>
 <!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>crud operation</title>
+  <title>USERS</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
 </head>
@@ -17,7 +17,7 @@ include 'dbconnection.php';
 
 <button class="btn btn-primary my-5" >
 
-<a href="user.php" class="text-light">add user</a>
+<a href="users.php" class="text-light">add new user</a>
 
 </button>
 
@@ -36,7 +36,7 @@ include 'dbconnection.php';
   <tbody>
 
 <?php
-$sql = "select * from `crud` ";
+$sql = "select * from `users` ";
 $result = mysqli_query($con,$sql);
 if($result)
 {
@@ -67,7 +67,7 @@ echo'<tr>
 </button>
 <button class="btn btn-primary my-5" >
 
-<a href="user.php" class="text-light">delete</a>
+<a href="users.php" class="text-light">delete</a>
 </button>
 </tr>';
 

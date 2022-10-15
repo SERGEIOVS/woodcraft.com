@@ -2,12 +2,12 @@
 include 'dbconnection.php';
 if(isset($_POST['submit']))
 {
-$productname =$_POST['name'];
-$productcategory = $_POST['category'];
-$productprice = $_POST['price'];
+$tool_name = $_POST['tool name'];
+$tool_category = $_POST['tool category'];
+$tool_price = $_POST['tool price'];
 
 
-$sql = "insert into `products` (name,category,price) values('$productname','$productcategory','$productprice')";
+$sql = "insert into `tools` (name,category,price) values('$tool_name','$tool_category','$tool_price')";
 $result = mysqli_query($con, $sql);
 if($result)
 {
@@ -30,7 +30,7 @@ else{
   <head>
     <!-- Required meta tags -->
     <meta charset = "utf-8">
-    <meta name = "viewport" content = "width=device-width , initial-scale = 1 " >
+    <meta name = "viewport" content = "width = device - width , initial-scale = 1 " >
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -47,7 +47,7 @@ else{
     <label >Product name</label>
     <input type="text" class="form-control"
     placeholder="введи название продукта"
-    productname = "name" autocomplete = "off";>
+    name = "name" autocomplete = "off";>
 
   </div>
 
@@ -57,7 +57,7 @@ else{
     <label >Product category</label>
     <input type="email" class="form-control"
     placeholder = "введи категорию продукта"
-    productname = "email" autocomplete = "off";>
+    name = "email" autocomplete = "off";>
 
     </div>
 
